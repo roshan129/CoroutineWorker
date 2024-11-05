@@ -25,27 +25,13 @@ class MyWorker @AssistedInject constructor(
         return Result.success()
     }
 
-
-
 }
 
 
 fun scheduleFetchConfigWork(applicationContext: Context) {
     println("scheduleFetchConfigWork called")
-    /*val fetchConfigWorkRequest = PeriodicWorkRequestBuilder<FetchConfigWorker>(
-        15,
-        TimeUnit.MINUTES,
-    ).setConstraints(
-        Constraints.Builder()
-            .setRequiredNetworkType(NetworkType.CONNECTED)
-            .build(),
-    ).build()
 
-    WorkManager.getInstance(applicationContext).enqueueUniquePeriodicWork(
-        "fetchConfigWork",
-        ExistingPeriodicWorkPolicy.KEEP,
-        fetchConfigWorkRequest,
-    )*/
+    //workManager.enqueueUniquePeriodicWork(Constants.UPDATE_CACHE_WORKER, ExistingPeriodicWorkPolicy.UPDATE, request)
 
     val initialWorkRequest = OneTimeWorkRequestBuilder<MyWorker>().build()
 

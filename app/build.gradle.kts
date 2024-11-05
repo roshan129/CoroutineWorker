@@ -75,7 +75,9 @@ dependencies {
     implementation(libs.hilt.lib)
     ksp(libs.hilt.compiler)
 
-    ksp("androidx.hilt:hilt-compiler:1.0.0")
+
+    ksp("androidx.hilt:hilt-compiler:1.2.0")
+    //ksp("com.google.dagger:hilt-compiler:2.50")
 
     implementation(libs.androidx.hilt.work)
     implementation(libs.work.runtime.ktx)
