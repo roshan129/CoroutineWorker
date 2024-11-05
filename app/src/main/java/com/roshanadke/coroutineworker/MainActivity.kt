@@ -20,9 +20,9 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
+/*
     @Inject
-    lateinit var myRepository: MyRepository
+    lateinit var myRepository: MyRepository*/
 
     val viewModel: MainActivityViewModel by viewModels()
 
@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
             CoroutineWorkerTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     LaunchedEffect(Unit) {
-                        println("result: ${myRepository.fetchData()}")
+                        //println("result: ${myRepository.fetchData()}")
                     }
                     Greeting(
                         name = "Android",
