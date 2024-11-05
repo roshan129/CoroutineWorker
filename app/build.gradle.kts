@@ -9,12 +9,12 @@ plugins {
 
 android {
     namespace = "com.roshanadke.coroutineworker"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.roshanadke.coroutineworker"
         minSdk = 31
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -74,6 +74,8 @@ dependencies {
     //hilt
     implementation(libs.hilt.lib)
     ksp(libs.hilt.compiler)
+
+    ksp("androidx.hilt:hilt-compiler:1.0.0")
 
     implementation(libs.androidx.hilt.work)
     implementation(libs.work.runtime.ktx)

@@ -1,10 +1,11 @@
 package com.roshanadke.coroutineworker.di
 
+import androidx.hilt.work.HiltWorkerFactory
 import com.roshanadke.coroutineworker.data.MyRepository
 import com.roshanadke.coroutineworker.data.MyRepositoryImpl
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
